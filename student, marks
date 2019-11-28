@@ -1,0 +1,21 @@
+student = ['student1','student2','student3','student4','student5','student6','student7','student8','student9','student10'] 
+mark = [45, 78, 12, 14, 48, 43, 45, 98, 35, 80]
+
+def top_5_students(student,mark):
+    m  = sorted(mark)
+    m = m[::-1]
+    argmax = []
+    for i in range(len(mark)):
+        c = mark.index(m[i])
+        argmax.append(c)
+    for i in range(5):
+        print(student[argmax[i]])
+            
+def least_5_students(student,mark):
+    m  = sorted(mark)
+    argmax = []
+    for i in range(len(mark)):
+        c = mark.index(m[i])
+        argmax.append(c)
+    for i in range(5):
+        print(student[argmax[i]])
