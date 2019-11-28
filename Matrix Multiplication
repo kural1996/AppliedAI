@@ -1,18 +1,25 @@
-a = [[2,3,4,4],[5,6,7,7]]
+a = [[2,3,4],[5,6,7]]
 b = [[11,12],[13,14],[15,16],[45,25]]
-c = list(range(len(a)))
-d = list(range(len(b[0])))
-g = []
-#To get matrix of zeroes in length of (rows of a X column of b)
-for i in range(len(a)):
-    s = []
-    for j in range(len(b[0])):
-        s.append(0)
-    g.append(s)
 
-for i in range(len(a)):
-    for j in range(len(b[0])):
-        for k in range(len(b)):
-            g[i][j] += a[i][k] * b[k][j]
-for r in g:
-    print(r)
+def Matrix_multiplication(a,b):
+    if len(a[0]) == len(b):
+        g = []
+        #To get matrix of zeroes in length of (rows of a X column of b)
+        for i in range(len(a)):
+            s = []
+            for j in range(len(b[0])):
+                s.append(0)
+            g.append(s)
+        # Matric Multiplication
+        for i in range(len(a)):
+            for j in range(len(b[0])):
+                for k in range(len(b)):
+                    g[i][j] += a[i][k] * b[k][j]
+        for r in g:
+            print(r)
+            
+    else:
+        print('Matrix Multiplication Impossible')
+
+        
+Matrix_multiplication(a,b)
