@@ -1,0 +1,12 @@
+#String Hashing
+
+import re
+
+def hashing(string):
+    hashed = ''
+    x = re.findall("[0-9]",string)
+    for i in range(len(x)):
+        hashed += '#'
+    return hashed
+    
+hashing('#2a$#b%c%561#')
