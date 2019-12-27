@@ -19,3 +19,17 @@ def least_5_students(student,mark):
         argmax.append(c)
     for i in range(5):
         print(student[argmax[i]])
+        
+def students_within_25_and_75:
+    dictionary = dict(zip(student,mark))
+    m = []
+    percentile = dict()
+    for i in mark:
+        if i >= 25 and i <= 75:
+            m.append(i)
+    for i in range(len(dictionary)):
+        if dictionary[student[i]] in m:
+            percentile[student[i]] = dictionary[student[i]]
+
+    percentile = sorted(percentile.items(), key = lambda x : x[1])
+    print(percentile[0][0],percentile[0][1])
