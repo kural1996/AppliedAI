@@ -1,0 +1,17 @@
+import random
+
+def pick_a_number_from_list(A):
+    def pick_a_number_from_list(A):
+    mag = []
+    for i in A:
+        for j in range(i):
+            mag.append(i)
+    random.shuffle(mag)
+    return random.choice(mag)
+
+def sampling_based_on_magnitued():
+    for i in range(1,100):
+        number = pick_a_number_from_list(A)
+        print(number)
+
+sampling_based_on_magnitued()
