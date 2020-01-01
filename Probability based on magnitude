@@ -1,3 +1,5 @@
+Without Proportional Sampling:
+
 import random
 
 def pick_a_number_from_list(A):
@@ -15,3 +17,26 @@ def sampling_based_on_magnitued():
         print(number)
 
 sampling_based_on_magnitued()
+
+Using Proportional Sampling:
+def pick_a_number_from_list(A):
+    S = sum(A)
+    L = []
+    for i in range(len(A)):
+        if i == 0:
+            tilda = A[0]/S
+            L.append(tilda)
+        else:
+            tilda = (A[i]/S) + L[i-1]
+            L.append(tilda)
+    r = random.uniform(0,1)
+    for i,value in enumerate(L):
+        if r <= value:
+            return A[i]
+        
+def sampling_based_on_magnitude():
+    for i in range(1,100):
+        number = pick_a_number_from_list(A)
+        print(number)
+
+sampling_based_on_magnitude()
